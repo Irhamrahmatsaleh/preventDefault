@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevent Default Example</title>
+</head>
+
+<body>
+  <h1>Form Submission Example</h1>
+
+  <!-- Formulir dengan dan tanpa event.preventDefault() -->
+  <form id="formWithPreventDefault">
+    <h2>Form with event.preventDefault()</h2>
+    <label for="nameWithPrevent">Name:</label>
+    <input type="text" id="nameWithPrevent" name="nameWithPrevent">
+    <button type="submit">Submit with preventDefault</button>
+  </form>
+
+  <form id="formWithoutPreventDefault">
+    <h2>Form without event.preventDefault()</h2>
+    <label for="nameWithoutPrevent">Name:</label>
+    <input type="text" id="nameWithoutPrevent" name="nameWithoutPrevent">
+    <button type="submit">Submit without preventDefault</button>
+  </form>
+
+  <script>
+    // Fungsi untuk formulir dengan preventDefault
+    function handleSubmitWithPreventDefault(event) {
+      event.preventDefault(); // Mencegah pengiriman formulir
+
+      const name = document.getElementById('nameWithPrevent').value;
+      alert('Form with event.preventDefault() submitted with name: ' + name);
+    }
+
+    // Fungsi untuk formulir tanpa preventDefault
+    function handleSubmitWithoutPreventDefault(event) {
+      const name = document.getElementById('nameWithoutPrevent').value;
+      alert('Form without event.preventDefault() submitted with name: ' + name);
+    }
+
+    // Menambahkan event listener untuk formulir dengan preventDefault
+    document.getElementById('formWithPreventDefault').addEventListener('submit', handleSubmitWithPreventDefault);
+
+    // Menambahkan event listener untuk formulir tanpa preventDefault
+    document.getElementById('formWithoutPreventDefault').addEventListener('submit', handleSubmitWithoutPreventDefault);
+  </script>
+</body>
+
+</html>
