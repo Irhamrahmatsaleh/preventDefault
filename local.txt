@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="left-section">
+        <div class="logo">
+          <a href="#"><img src="https://dumbways.id/assets/images/brandwhite.png" alt="logo"></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <ul class="nav-links">
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="contact-container">
+      <form action="" class="contact-form">
+        <h2>Contact Me</h2>
+        <div class="form-group">
+          <label for="name"></label>
+          <input type="text" id="name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="email"></label>
+          <input type="text" id="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="phone"></label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select name="subject" id="subject">
+            <option value="">Select a subject</option>
+            <option value="general_inquiry">General Inquiry</option>
+            <option value="feedback">Feedback</option>
+            <option value="support">Support</option>
+            <option value="partnership">Partnership</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="message" id="message"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" id="submit" value="Send Message">
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>
